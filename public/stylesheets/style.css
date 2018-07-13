@@ -1,8 +1,24 @@
+* {
+  box-sizing: border-box; }
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  margin: 0px; }
+  margin: 0px;
+  background-color: black; }
 
 .flex {
   display: flex; }
+
+.info {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  display: block;
+  color: #fafafa; }
+
+.test {
+  border: solid 1px #fefefe; }
 
 /*# sourceMappingURL=style.css.map */

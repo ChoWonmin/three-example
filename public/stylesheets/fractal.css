@@ -1,0 +1,41 @@
+.btn {
+  width: 90%;
+  height: 32px;
+  margin: 16px auto;
+  border: solid 1px #fefefe;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 32px;
+  color: #fafafa;
+  background-color: #282828; }
+  .btn:hover {
+    background-color: #5b5b5b; }
+  .btn:active {
+    background-color: black; }
+
+.side {
+  position: absolute;
+  background-color: black;
+  flex: 1;
+  padding: 8px; }
+  .side .wrap {
+    margin: 12px 0; }
+    .side .wrap .text {
+      color: white;
+      margin: 2px 0; }
+    .side .wrap input {
+      width: 80%; }
+  .side .color-wrap {
+    display: flex; }
+    .side .color-wrap .text {
+      flex: 1;
+      color: white;
+      margin: 2px 0; }
+    .side .color-wrap input {
+      flex: 1; }
+
+.renderer {
+  flex: 6;
+  height: 100vh; }
+
+/*# sourceMappingURL=fractal.css.map */

@@ -6,9 +6,9 @@ const ThreeRect = function() {
     const rect = [];
     var size = 10;
 
-    this.init = function (target) {
+    this.init = function (target, cameramView) {
         camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.01, 10 );
-        camera.position.z = 3;
+        camera.position.set(cameramView.x, cameramView.y, cameramView.z);
 
         scene = new THREE.Scene();
 
@@ -30,6 +30,24 @@ const ThreeRect = function() {
 
         stats = new Stats();
         target.appendChild(stats.dom);
+    }
+
+    this.createTexture = function (text) {
+        var loader = new THREE.FontLoader();
+
+        loader.load( 'fonts/helvetiker_regular.typeface.json', function ( font ) {
+
+            var geometry = new THREE.TextGeometry( 'Hello three.js!', {
+                font: font,
+                size: 80,
+                height: 5,
+                curveSegments: 12,
+                bevelEnabled: true,
+                bevelThickness: 10,
+                bevelSize: 8,
+                bevelSegments: 5
+            } );
+        } );
     }
 
     var radius = 0;
@@ -93,7 +111,24 @@ const ThreeSimpleCube = function() {
         geometry = new THREE.BoxGeometry( 1, 1, 1 );
         material = new THREE.MeshNormalMaterial();
         cube = new THREE.Mesh( geometry, material );
+
+        var material = new THREE.LineBasicMaterial( { color: 0xffffaa } );
+        var geometry = new THREE.BufferGeometry();
+        var vertices = new Float32Array( [
+            -1.0, -1.0,  1.0,
+            1.0, -1.0,  1.0,
+            1.0,  1.0,  1.0,
+
+            1.0,  1.0,  1.0,
+            -1.0,  1.0,  1.0,
+            -1.0, -1.0,  1.0
+        ] );
+
+        geometry.addAttribute( 'position', new THREE.BufferAttribute( vertices, 3 ) );
+        var line = new THREE.Line( geometry, material );
+
         scene.add( cube );
+        scene.add( line );
 
         camera.position.z = 5;
     }
@@ -108,5 +143,4 @@ const ThreeSimpleCube = function() {
     };
 
 }
-
 

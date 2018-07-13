@@ -1,15 +1,13 @@
 extends layout
 
 block content
-  script(src="/three/build/three.js")
-  script(src="/three/examples/js/controls/OrbitControls.js")
-  script(src="/three/examples/js/libs/stats.min.js")
-  .flex
-    .renderer
-    .renderer
-  .flex
-    .renderer
-    .renderer
-  script(src="/ThreeRect.js")
-  script(src="/ThreeSphere.js")
-  script(src="/index.js")
+    .flex
+        .renderer
+        .renderer
+    .flex
+        .renderer
+        .renderer
+    script(src="/component/ThreeRect.js")
+    script(src="/component/ThreeSphere.js")
+    script(src="/component/StarField.js")
+    script(src="/index.js")

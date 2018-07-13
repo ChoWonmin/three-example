@@ -1,0 +1,41 @@
+$btn-color: #282828
+
+.btn
+  width: 90%
+  height: 32px
+  margin: 16px auto
+  border: solid 1px #fefefe
+  border-radius: 4px
+  text-align: center
+  line-height: 32px
+  color: #fafafa
+  background-color: $btn-color
+  &:hover
+    background-color: lighten($btn-color, 20)
+  &:active
+    background-color: darken($btn-color, 20)
+
+.side
+  position: absolute
+  background-color: black
+  flex: 1
+  padding: 8px
+  .wrap
+    margin: 12px 0
+    .text
+      color: white
+      margin: 2px 0
+    input
+      width: 80%
+  .color-wrap
+    display: flex
+    .text
+      flex: 1
+      color: white
+      margin: 2px 0
+    input
+      flex: 1
+
+.renderer
+  flex: 6
+  height: 100vh
