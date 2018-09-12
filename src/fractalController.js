@@ -1,4 +1,10 @@
-const r = new Frcatal();
+$('#next-btn').click(function() {
+    location.href = '/geoBufferPlane';
+});
+
+const fractals = {'/fractal': new Fractal(), '/fractalByBuffer': new FractalByBuffer()}
+
+const r = fractals[window.location.pathname];
 
 $(".gen-btn").click(function() {
     const inputs = $(".side input");

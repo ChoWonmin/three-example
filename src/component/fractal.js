@@ -1,4 +1,4 @@
-const Frcatal = function() {
+const Fractal = function() {
     var camera, scene, renderer;
     var geometry, material, mesh, stats;
     const that = this;
@@ -11,7 +11,6 @@ const Frcatal = function() {
         target = parameter.target;
         data = parameter.data;
 
-        console.log(data)
         const cameraView = parameter.cameraView;
 
         that.generateColor(0.5);
@@ -100,10 +99,12 @@ const Frcatal = function() {
 
     this.delete = function() {
         target.innerHTML = '';
+        camera, scene, renderer, geometry, material, mesh, stats = null;
     };
 
     this.animate = function() {
         requestAnimationFrame(that.animate);
         renderer.render(scene, camera);
     };
+
 }

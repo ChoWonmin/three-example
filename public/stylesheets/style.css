@@ -21,4 +21,19 @@ body {
 .test {
   border: solid 1px #fefefe; }
 
+#next-btn {
+  top: 30px;
+  right: 30px;
+  position: fixed;
+  width: 96px;
+  height: 32px;
+  background-color: #ff704f;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 4px;
+  color: #fff; }
+  #next-btn:hover {
+    background-color: #ff9982;
+    cursor: pointer; }
+
 /*# sourceMappingURL=style.css.map */

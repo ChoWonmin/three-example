@@ -6,6 +6,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/dataset', function(req,res){
+    res.json({hello:'world'});
+});
+
 router.get('/cam4', function(req, res, next) {
     res.render('cam4');
 });
@@ -20,6 +24,14 @@ router.get('/fractal', function(req, res, next) {
 
 router.get('/fractalByBuffer', function(req, res, next) {
     res.render('fractalByBuffer');
+});
+
+router.get('/geoBuffer', function(req, res, next) {
+    res.render('geoBuffer');
+});
+
+router.get('/geoBufferPlane', function(req, res, next) {
+    res.render('geoBufferPlane');
 });
 
 module.exports = router;

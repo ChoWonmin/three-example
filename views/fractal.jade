@@ -2,6 +2,9 @@ extends layout
 
 block content
     link(rel='stylesheet', href='/stylesheets/fractal.css')
+
+    btn#next-btn next
+
     .flex
         .side.test
             .wrap
@@ -30,5 +33,6 @@ block content
             .btn.delete-btn Delete
         .renderer
     script(src="/component/fractal.js")
+    script(src="/component/fractalByBuffer.js")
     script(src="/fractalController.js")
 
