@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node ./bin/www"
   },
-  "presets": ["env"],
+  "presets": [
+    "env"
+  ],
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
