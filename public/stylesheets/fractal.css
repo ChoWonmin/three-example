@@ -21,8 +21,11 @@
   .side .wrap {
     margin: 12px 0; }
     .side .wrap .text {
+      display: flex;
       color: white;
       margin: 2px 0; }
+      .side .wrap .text .val {
+        padding-left: 4px; }
     .side .wrap input {
       width: 80%; }
   .side .color-wrap {

@@ -2,9 +2,24 @@ $('#next-btn').click(function() {
     location.href = '/geoBufferPlane';
 });
 
-const fractals = {'/fractal': new Fractal(), '/fractalByBuffer': new FractalByBuffer()}
+const fractals = {'/fractal': new Fractal(), '/fractalByBuffer': new FractalByBuffer()};
 
 const r = fractals[window.location.pathname];
+
+const inputs = $('input');
+const vals = $('.val');
+
+for (let i = 0; i < inputs.length - 2; i++) {
+    const input = inputs[i];
+    const val = vals[i];
+
+    val.innerHTML = input.value;
+
+    $(input).change(() => {
+        val.innerHTML = input.value;
+    });
+
+}
 
 $(".gen-btn").click(function() {
     const inputs = $(".side input");
@@ -12,6 +27,7 @@ $(".gen-btn").click(function() {
     const data = {};
     _.forEach(inputs, r => {
         data[r.name] = (isFinite(r.value))?r.value*1:r.value;
+        $(`#${r.name}`).val(r.val);
     });
 
     const parameter = {
@@ -25,5 +41,5 @@ $(".gen-btn").click(function() {
 });
 
 $(".delete-btn").click(function() {
-    r.delete();
+    window.location = '/fractal';
 });
