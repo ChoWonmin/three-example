@@ -56,7 +56,7 @@ const StarField = function() {
             if (star.position.z > 45) {
                 star.position.set((Math.random() - 0.5)*50 , (Math.random() - 0.5)*50, 0)
             } else {
-                star.position.z += 0.5;
+                star.position.z += 0.8;
             }
 
         });
